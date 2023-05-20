@@ -1,0 +1,7 @@
+var x = 42; // Пример значения переменной x
+
+if (typeof x === 'number') {
+  console.log('x - число');
+} else {
+  console.log('x не является числом');
+}
