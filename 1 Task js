@@ -1,14 +1,25 @@
-const input = prompt("Введите значение:");
+function countEvenOddZero(array) {
+  let evenCount = 0;
+  let oddCount = 0;
+  let zeroCount = 0;
 
-const number = +input;
-if (isNaN(number)) {
-  console.log("Упс, кажется, вы ошиблись");
-} else if (typeof number === "number") {
-  if (isNaN(number)) {
-    console.log("Введено значение NaN");
-  } else if (number % 2 === 0) {
-    console.log("Число чётное");
-  } else {
-    console.log("Число нечётное");
+  for (let element of array) {
+    if (typeof element === "number" && !isNaN(element)) {
+      if (element === 0) {
+        zeroCount++;
+      } else if (element % 2 === 0) {
+        evenCount++;
+      } else {
+        oddCount++;
+      }
+    }
   }
+
+  console.log("Количество чётных элементов:", evenCount);
+  console.log("Количество нечётных элементов:", oddCount);
+  console.log("Количество нулевых элементов:", zeroCount);
 }
+
+// Пример вызова функции
+const myArray = [1, 2, "hello", null, 5, 0, 6, 7, undefined, 8, 0];
+countEvenOddZero(myArray);
