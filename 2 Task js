@@ -1,7 +1,17 @@
-var x = 42; // Пример значения переменной x
-
-if (typeof x === 'number') {
-  console.log('x - число');
-} else {
-  console.log('x не является числом');
+function isPrime(number) {
+  if (number > 1000) {
+    return "Данные неверны. Введите число, не превышающее 1000.";
+  } else if (number < 2) {
+    return "Число не является простым.";
+  } else {
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return "Число не является простым.";
+      }
+    }
+    return "Число является простым.";
+  }
 }
+console.log(isPrime(17));  
+console.log(isPrime(100)); 
+console.log(isPrime(1001)); 
