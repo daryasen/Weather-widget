@@ -1,8 +1,13 @@
-let array = [1, 2, 3, 4, 5]; 
+const power = (x, n) => {
+  let result = 1;
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+  return result;
+};
 
-console.log("Количество элементов в массиве: " + array.length);
-
-console.log("Элементы массива:");
-array.forEach(function(element) {
-    console.log(element);
-});
+// Пример использования:
+const x = 2;
+const n = 5;
+const result = power(x, n);
+console.log(result);
