@@ -1,9 +1,0 @@
-function createAddFunction(num1) {
-  return function(num2) {
-    return num1 + num2;
-  }
-}
-
-const addFive = createAddFunction(5);
-console.log(addFive(10));
-
