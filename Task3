@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Приложение</title>
+  </head>
+  <body>
+    <input type="number" id="numberInput" placeholder="Введите число" />
+    <button id="submitButton">Отправить</button>
+    <div id="resultContainer"></div>
+
+    <script>
+      document.getElementById('submitButton').addEventListener('click', function () {
+        const numberInput = document.getElementById('numberInput');
+        const value = parseInt(numberInput.value);
+
+        if (value < 1 || value > 10) {
+          displayResult('Число вне диапазона от 1 до 10');
+        } else {
+          const xhr = new XMLHttpRequest();
+          const url = `https://picsum.photos/v2/list?limit=${value}`;
+          xhr.open('GET', url, true);
+
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              const response = JSON.parse(xhr.responseText);
+              displayImages(response);
+            } else {
+              displayResult('Ошибка при получении данных');
+            }
+          };
+
+          xhr.onerror = function () {
+            displayResult('Ошибка при отправке запроса');
+          };
+
+          xhr.send();
+        }
+      });
+
+      function displayResult(message) {
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.innerHTML = `<p>${message}</p>`;
+      }
+
+      function displayImages(images) {
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.innerHTML = '';
+
+        images.forEach(function (image) {
+          const imgElement = document.createElement('img');
+          imgElement.src = image.download_url;
+          resultContainer.appendChild(imgElement);
+        });
+      }
+    </script>
+  </body>
+</html>
+
