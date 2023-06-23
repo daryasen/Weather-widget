@@ -1,108 +1,106 @@
+html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Приложение для запроса картинок</title>
+  <title>Запрос картинок</title>
   <style>
-    /* Простой стиль для отображения списка картинок */
-    ul {
-      list-style: none;
-      padding: 0;
+    #images-container {
+      display: flex;
+      flex-wrap: wrap;
     }
-    li {
-      display: inline-block;
-      margin: 10px;
-    }
-    img {
+
+    .image {
+      margin: 5px;
       width: 200px;
       height: 200px;
     }
+
     .error {
       color: red;
-      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Приложение для запроса картинок</h1>
-  
-  <label for="pageInput">Номер страницы:</label>
-  <input type="text" id="pageInput" placeholder="Введите номер страницы от 1 до 10"><br>
-  
-  <label for="limitInput">Лимит:</label>
-  <input type="text" id="limitInput" placeholder="Введите лимит от 1 до 10"><br>
-  
-  <button id="requestButton">Запрос</button>
-  
-  <div id="imageList"></div>
-  <div id="errorText"></div>
-  
-  <script>
-    // Получение элементов со страницы
-    const pageInput = document.getElementById('pageInput');
-    const limitInput = document.getElementById('limitInput');
-    const requestButton = document.getElementById('requestButton');
-    const imageList = document.getElementById('imageList');
-    const errorText = document.getElementById('errorText');
+  <h1>Запрос картинок</h1>
 
-    // Обработчик события клика на кнопку
-    requestButton.addEventListener('click', () => {
-      // Получение значений из полей ввода
-      const page = parseInt(pageInput.value);
-      const limit = parseInt(limitInput.value);
+  <label for="page-input">Номер страницы:</label>
+  <input type="text" id="page-input" />
 
-      // Проверка введенных значений на валидность
-      let errorMessage = '';
+  <label for="limit-input">Лимит:</label>
+  <input type="text" id="limit-input" />
 
-      if (isNaN(page) || page < 1 || page > 10) {
-        errorMessage += 'Номер страницы вне диапазона от 1 до 10<br>';
-      }
+  <button id="request-button">Запрос</button>
 
-      if (isNaN(limit) || limit < 1 || limit > 10) {
-        errorMessage += 'Лимит вне диапазона от 1 до 10<br>';
-      }
+  <div id="error-message" class="error"></div>
 
-      // Вывод сообщения об ошибке, если есть
-      if (errorMessage !== '') {
-        errorText.innerHTML = errorMessage;
-        imageList.innerHTML = '';
-        return;
-      }
-
-      // Очистка сообщений об ошибке и списка картинок
-      errorText.innerHTML = '';
-      imageList.innerHTML = '';
-
-      // Формирование URL для запроса
-      const url = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
-
-      // Выполнение запроса
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          // Вывод полученных картинок
-          const images = data.map(item => `<li><img src="${item.download_url}"></li>`);
-          imageList.innerHTML = `<ul>${images.join('')}</ul>`;
-          // Сохранение данных в localStorage
-          localStorage.setItem('lastImages', JSON.stringify(data));
-        })
-        .catch(error => {
-          // Обработка ошибок запроса
-          errorText.innerHTML = 'Произошла ошибка при выполнении запроса.';
-          console.error(error);
-        });
-    });
-
-    // Восстановление последних успешно выполненных запросов при загрузке страницы
-    window.addEventListener('load', () => {
-      const lastImages = localStorage.getItem('lastImages');
-
-      if (lastImages) {
-        const data = JSON.parse(lastImages);
-        const images = data.map(item => `<li><img src="${item.download_url}"></li>`);
-        imageList.innerHTML = `<ul>${images.join('')}</ul>`;
-      }
-    });
-  </script>
+  <div id="images-container"></div>
+  <script src="app.js"></script>
 </body>
 </html>
+
+javascript
+window.addEventListener('DOMContentLoaded', () => {
+  const pageInput = document.getElementById('page-input');
+  const limitInput = document.getElementById('limit-input');
+  const requestButton = document.getElementById('request-button');
+  const errorMessage = document.getElementById('error-message');
+  const imagesContainer = document.getElementById('images-container');
+
+  // Получение последних успешно выполненных параметров из localStorage
+  const lastPage = localStorage.getItem('lastPage');
+  const lastLimit = localStorage.getItem('lastLimit');
+  if (lastPage && lastLimit) {
+    pageInput.value = lastPage;
+    limitInput.value = lastLimit;
+    requestImages(lastPage, lastLimit);
+  }
+
+  requestButton.addEventListener('click', () => {
+    const page = parseInt(pageInput.value);
+    const limit = parseInt(limitInput.value);
+
+    errorMessage.textContent = '';
+    imagesContainer.innerHTML = '';
+
+    if (isNaN(page) || isNaN(limit)) {
+      errorMessage.textContent = 'Номер страницы и лимит должны быть числами.';
+      return;
+    }
+
+    if (page < 1 || page > 10) {
+      errorMessage.textContent = 'Номер страницы вне диапазона от 1 до 10.';
+      return;
+    }
+
+    if (limit < 1 || limit > 10) {
+      errorMessage.textContent = 'Лимит вне диапазона от 1 до 10.';
+      return;
+    }
+
+    requestImages(page, limit);
+  });
+
+  function requestImages(page, limit) {
+    // Сохранение параметров в localStorage
+    localStorage.setItem('lastPage', page);
+    localStorage.setItem('lastLimit', limit);
+
+    const url = `https://picsum.photos/v2/list?page=${page}&limit=${limit}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(item => {
+          const imageElement = document.createElement('img');
+          imageElement.src = item.download_url;
+          imageElement.classList.add('image');
+          imagesContainer.appendChild(imageElement);
+        });
+      })
+      .catch(error => {
+        console.error(error);
+        errorMessage.textContent = 'Ошибка при выполнении запроса.';
+      });
+  }
+});
 
