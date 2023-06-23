@@ -1,47 +1,40 @@
-const xml = `
-<list>
-  <student>
-    <name lang="en">
-      <first>Ivan</first>
-      <second>Ivanov</second>
-    </name>
-    <age>35</age>
-    <prof>teacher</prof>
-  </student>
-  <student>
-    <name lang="ru">
-      <first>Петр</first>
-      <second>Петров</second>
-    </name>
-    <age>58</age>
-    <prof>driver</prof>
-  </student>
-</list>
-`;
+const fs = require('fs');
+const xml2js = require('xml2js');
 
-// Функция для преобразования XML в JS-объект
-function parseXML(xml, callback) {
-  const parser = new xml2js.Parser();
-  parser.parseString(xml, callback);
-}
+// Читаем XML-файл
+const xmlData = fs.readFileSync('input.xml', 'utf-8');
 
-// Преобразование XML в JS-объект
-parseXML(xml, (err, result) => {
+// Создаем парсер
+const parser = new xml2js.Parser();
+
+// Преобразуем XML в JS-объект
+parser.parseString(xmlData, (err, result) => {
   if (err) {
-    console.error('Ошибка при преобразовании XML:', err);
-  } else {
-    const students = result.list.student.map((student) => {
-      const name = student.name[0];
-      const lang = name.$.lang;
-      const first = name.first[0];
-      const second = name.second[0];
-      const age = parseInt(student.age[0], 10);
-      const prof = student.prof[0];
-
-      return { name: `${first} ${second}`, age, prof, lang };
-    });
-
-    const jsObject = { list: students };
-    console.log(jsObject);
+    console.error('Ошибка при парсинге XML:', err);
+    return;
   }
+
+  // Получаем список студентов
+  const students = result.list.student;
+
+  // Преобразуем студентов в требуемый формат
+  const jsObject = {
+    list: students.map(student => {
+      const name = student.name[0];
+      const firstName = name.first[0];
+      const lastName = name.second[0];
+      const lang = name.$.lang;
+
+      return {
+        name: `${firstName} ${lastName}`,
+        age: Number(student.age[0]),
+        prof: student.prof[0],
+        lang: lang
+      };
+    })
+  };
+
+  // Выводим результат в консоль
+  console.log(jsObject);
 });
+
