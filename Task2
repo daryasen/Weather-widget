@@ -1,4 +1,4 @@
-const jsonString = `{
+const json = `{
   "list": [
     {
       "name": "Petr",
@@ -13,5 +13,8 @@ const jsonString = `{
   ]
 }`;
 
-const jsObject = JSON.parse(jsonString);
-console.log(jsObject);
+const obj = JSON.parse(json);
+
+console.log(obj.list);
+console.log(obj.list[0].name);
+console.log(obj.list[1].age);
