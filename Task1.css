@@ -1,0 +1,23 @@
+.button {
+  display: inline-block;
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.icon_01:before {
+  content: "icon_01";
+  /* Добавьте свои стили для иконки icon_01 */
+}
+
+.icon_02:before {
+  content: "icon_02";
+  /* Добавьте свои стили для иконки icon_02 */
+}
+
+
+
+
+
+
