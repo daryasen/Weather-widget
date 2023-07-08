@@ -3,3 +3,4 @@
       var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
       var screenSizeText = 'Размер экрана: ' + screenWidth + ' x ' + screenHeight;
       alert(screenSizeText);
+ }
