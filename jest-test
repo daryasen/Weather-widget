@@ -1,3 +1,8 @@
+Установка Jest: npm install --save-dev jest
+Настройка конфигурации:
+
+
+
 mkdir jest-test
 cd jest-test
 
