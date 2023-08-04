@@ -1,12 +1,3 @@
 Установка Jest: npm install --save-dev jest
-Настройка конфигурации:
 
-
-
-mkdir jest-test
-cd jest-test
-
-
-//выполняем команду npm init и следуем указаниям, чтобы создать файл package.json: npm init
-//Теперь установим пакет jest с помощью npm:npm install jest --save-dev
 
