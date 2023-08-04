@@ -1,2 +1,8 @@
 mkdir jest-test
 cd jest-test
+
+
+//выполняем команду npm init и следуем указаниям, чтобы создать файл package.json
+
+npm init
+
