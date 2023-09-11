@@ -25,24 +25,24 @@ class NavigationBar {
             item.addEventListener('click', this.selectToggle); // переключаем класс .is-active у .header-tabs_select показывая .header-tabs_select-body.
         });
 
-        this.selectItem.forEach(item => { //нажимаем на пункты .header-tabs_select-body и записываем в .header-tabs_select-current.
+        this.selectItem.forEach(item => {
             item.addEventListener('click', this.selectChoose);
         }); 
      }
 
-    public selectToggle() {     //переключает .is-active у родителя .header-tabs_select-header (т.е. у .header-tabs_select)
+    public selectToggle() {   
         this.parentElement?.classList.toggle('is-active'); // а .header-tabs_select имея чайлд .header-tabs_select-body, показывает его.
     };
 
     public selectChoose() {
-        this.text = this.innerText; //записываем в text пункт на который мы нажимаем
-        this.select = this.closest('.header-tabs_select'); // возвращает ближайший родительский элемент (или сам элемент - .header-tabs_select)
-        this.currentText = this.select?.querySelector('.header-tabs_select-current'); // записываем то что у нас в .header-tabs_select-current
-        this.currentText.innerText = this.text; //записываем в .header-tabs_select-current то что у нас в text
-        this.select?.classList.remove('is-active'); // убираем .is-active и .header-tabs_select-body пропадает
+        this.text = this.innerText; 
+        this.select = this.closest('.header-tabs_select');
+        this.currentText = this.select?.querySelector('.header-tabs_select-current'); 
+        this.currentText.innerText = this.text; 
+        this.select?.classList.remove('is-active'); 
         //this.filterSelect(this.text);
         navBar.removeCheckMarkClass();
-        this.classList?.add('check-mark'); // дабавляем галочку на выбранный пункт
+        this.classList?.add('check-mark'); 
         
     };
 
@@ -54,7 +54,7 @@ class NavigationBar {
 
     public reverseArrow() {
         this.selectArrow?.addEventListener('click', function(this: any): void {
-            this.classList.toggle('reverse-arrow'); // переварачиваем треугольник svg
+            this.classList.toggle('reverse-arrow'); 
         })
     } 
 }
