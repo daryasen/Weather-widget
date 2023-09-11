@@ -1,25 +1,36 @@
 {
-  "name": "sf-ts-final-task",
+  "name": "system_of_comment_tp_oop",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "commentary system for site - treining",
+  "main": "mainComments.js",
   "scripts": {
-    "start": "http-server -p 5566",
-    "build": "npx tsc"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "",
+    "build": "webpack --config webpack.config.js",
+    "start:dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmitrykurmanov/SF-TS-Final-Task.git"
+    "url": "git+https://github.com/daryasen/Comment_System.git"
   },
-  "author": "",
+  "author": "BatanAndrei",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dmitrykurmanov/SF-TS-Final-Task/issues"
+    "url": "https://github.com/daryasen/Comment_System/issues"
   },
-  "homepage": "https://github.com/dmitrykurmanov/SF-TS-Final-Task#readme",
-  "devDependencies": {
-    "http-server": "^14.1.1"
-  },
+  "homepage": "https://github.com/daryasen/Comment_System#readme",
+  "keywords": [
+    "io",
+    "geo",
+    "country"
+  ],
   "dependencies": {
-    "typescript": "^4.7.4"
+    "axios": "^1.3.6",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   }
 }
