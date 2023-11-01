@@ -1,0 +1,65 @@
+@import "src/styles/mixins";
+
+
+.Login {
+  @include container;
+  @include d-flex;
+  min-height: 70vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginFormWrapper {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  max-width: 400px;
+  background: #FFE0E2;
+  box-shadow: 0px 24px 36px 0px rgba(53, 49, 84, 0.28);
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #122ac0;
+  }
+}
+
+.btn {
+  @include btn;
+  width: 100%;
+}
+
+.textInput {
+  width: 100%;
+  border: 1px solid #5C6A79;
+  padding: 18px;
+  color: #000000;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
