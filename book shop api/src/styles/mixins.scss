@@ -1,0 +1,48 @@
+@mixin container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.container {
+  @include container;
+}
+
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin flex-col {
+  @include d-flex;
+  flex-direction: column;
+}
+
+@mixin end {
+  justify-content: flex-end;
+}
+
+@mixin s-btw {
+  justify-content: space-between;
+}
+
+@mixin center {
+  justify-content: center;
+}
+
+@mixin grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin btn {
+  background: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid #4C3DB2;
+  padding: 18px;
+  color: #4C3DB2;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

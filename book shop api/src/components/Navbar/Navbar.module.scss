@@ -1,0 +1,101 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Navbar {
+  @include d-flex;
+  @include s-btw;
+  @include container;
+  min-height: 116px;
+  padding: 0 15px;
+  align-items: center;
+  position: sticky;
+  z-index: 2;
+}
+
+.Navbar__logo {
+
+}
+
+.Navbar__logo a {
+  color: $text-black;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.Navbar__links {
+  @include d-flex;
+  gap: 40px;
+}
+
+@media (max-width: 1120px) {
+  .Navbar__links {
+    display: none;
+  }
+}
+
+.Navbar__links__link {
+  color: $text-gray;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+
+  &__active {
+    @extend .Navbar__links__link;
+    color: $text-black;
+    font-weight: 900;
+  }
+}
+
+.profile__btn {
+  all: unset;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: " ";
+  vertical-align: text-bottom;
+
+  &__user {
+    @extend .profile__btn;
+    background-image: url("../../../public/img/svg/user.svg");
+  }
+  &__search {
+    @extend .profile__btn;
+    background-image: url("../../../public/img/svg/search.svg");
+  }
+  &__basket {
+    @extend .profile__btn;
+    position: relative;
+    background-image: url("../../../public/img/svg/shop bag.svg");
+  }
+}
+
+.basket__items {
+  display: flex;
+  @include center;
+  align-items: center;
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  // content: "";
+  height: 13px;
+  width: 13px;
+  border-radius: 6px;
+  background-color: $red;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.Navbar__profile {
+  @include d-flex;
+  @include s-btw;
+  gap: 40px;
+}
+
