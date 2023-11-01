@@ -31,17 +31,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Why use Create Next App?
+create-next-app allows you to create a new Next.js app within seconds. It is officially maintained by the creators of Next.js, and includes a number of benefits:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Project Demo on Vercel
-
-You may check project [demo here](https://book-shop-next.vercel.app/)
-
-To view cart and profile page you may use this credentials:
+Interactive Experience: Running npx create-next-app@latest (with no arguments) launches an interactive experience that guides you through setting up a project.
+Zero Dependencies: Initializing a project is as quick as one second. Create Next App has zero dependencies.
+Offline Support: Create Next App will automatically detect if you're offline and bootstrap your project using your local package cache.
+Support for Examples: Create Next App can bootstrap your application using an example from the Next.js examples collection (e.g. npx create-next-app --example api-routes).
+Tested: The package is part of the Next.js monorepo and tested using the same integration test suite as Next.js itself, ensuring it works as expected with every release.
 ```
 test@mail.com
 testlongpassword
