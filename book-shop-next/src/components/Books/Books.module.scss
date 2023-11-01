@@ -1,0 +1,147 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/typography.scss";
+
+.Books {
+
+}
+
+.book__section {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@media (min-width: 1120px) {
+  .book__section {
+      width: 1120px;
+  }
+}
+
+//@media (min-width: 992px) {
+//  .book__section {
+//    width: 992px;
+//  }
+//}
+
+.book__list {
+  grid-area: books;
+  @include grid-2-col;
+  row-gap: 70px;
+  column-gap: 75px;
+  z-index: 1;
+}
+
+.book {
+  @include d-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  z-index: 10;
+  margin-top: 36px;
+  justify-content: flex-end;
+}
+
+@media (min-width: 576px) {
+  .book {
+    flex-direction: row;
+  }
+}
+
+.book__poster {
+  @include flex-col;
+  justify-content: center;
+  box-shadow: 0 24px 36px rgba(53, 49, 84, 0.28);
+}
+
+.book__details {
+  height: 100%;
+  width: 175px;
+  @include flex-col;
+  gap: 15px;
+  justify-content: center;
+}
+
+.book__title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-black;
+}
+
+.book__author {
+  @include os-normal;
+  color: $text-gray;
+}
+
+.book__description {
+  @include os-normal;
+  color: $text-gray;
+}
+
+.book__price {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $text-black;
+}
+
+.book__rating {
+  @include d-flex;
+  gap: 10px;
+
+  &__stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+
+    &::before {
+      content: "★★★★★";
+      letter-spacing: 3px;
+      background: linear-gradient(
+                      90deg,
+                      $star-color var(--percent),
+                      $star-background var(--percent)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__reviews {
+    @include os-normal;
+    text-transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .book__rating {
+    flex-direction: column;
+  }
+}
+
+.loadMore {
+  width: 175px;
+  margin: 30px auto;
+  grid-area: button;
+}
+
+@media (max-width: 1120px) {
+  .book__list {
+    @include flex-col;
+    align-items: center;
+  }
+}
+
+.btn {
+  @include btn;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  border: 1px solid #EEEDF5;
+  color: #5C6A79;
+}

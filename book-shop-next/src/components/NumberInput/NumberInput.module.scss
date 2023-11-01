@@ -1,0 +1,59 @@
+.NumberInput {
+    width: 150px;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #EEEDF5;
+
+    input {
+        all: unset;
+        cursor: pointer;
+        width: 50px;
+        height: 100%;
+        color: #5C6A79;
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        text-align: center;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    button {
+        position: relative;
+        padding: 6px;
+        width: 50px;
+        height: 75%;
+        background: unset;
+    }
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 992px) {
+    .NumberInput {
+        width: fit-content;
+        height: 25px;
+
+        input {
+            width: 25px;
+        }
+
+        button {
+            width: 25px;
+        }
+    }
+}
