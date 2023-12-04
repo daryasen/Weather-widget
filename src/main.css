@@ -1,0 +1,180 @@
+.app {
+   margin: 50px auto;
+   padding: 15px;
+   width: 600px;
+   min-height: 361px;
+   height: auto;
+   background-color: rgb(35, 35, 35);
+   border-radius: 30px;
+   color: #979797;
+}
+
+button {
+   background: none;
+}
+
+/* Location */
+.location {
+   display: flex;
+   flex-direction: row;
+   /* justify-content: space-between; */
+   align-items: center;
+   position: relative;
+}
+
+.location .loc {
+   border: none;
+   cursor: pointer;
+}
+
+.location p {
+   margin-right: 7px;
+   font-size: 16px;
+}
+
+.location button {
+   border: 1px solid balck;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.search {
+   position: absolute;
+   top: 8px;
+   right: -10px;
+   padding: 5px;
+   margin-right: 20px;
+   width: 260px;
+   display: flex;
+   align-items: center;
+   background-color: rgb(59, 59, 59);
+   border-radius: 15px;
+}
+
+.search #input {
+   margin-left: 5px;
+   background-color: rgb(59, 59, 59);
+   border: none;
+   color: #ffffff;
+}
+
+/* Data */
+.date {
+   position: relative;
+}
+
+.date button p {
+   color: #979797;
+}
+
+.date button p:hover {
+   color: #ffffff;
+}
+
+.date button {
+   border: none;
+   cursor: pointer;
+}
+
+.date button .active {
+   color: #ffffff;
+}
+
+.date .alert {
+   display: none;
+}
+
+.date .alert-active {
+   display: block;
+   color: brown;
+   font-size: 20px;
+   position: absolute;
+   top: -45px;
+   left: 45px;
+}
+
+/* Forecast */
+.forecast {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.weather {
+   position: relative;
+   width: 160px;
+   /* height: 190px; */
+   margin: 15px 7px;
+   padding: 20px;
+   padding-right: 0;
+   background-color: rgb(41, 136, 136);
+   border-radius: 15px;
+   color: #ffffff;
+}
+
+.weekday {
+   margin: 0px 25px;
+   margin-top: -11px;
+}
+
+.temp-icon {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+   align-items: center;
+}
+
+.temp-icon .temp {
+   font-size: 23px;
+   margin: 0 11px;
+}
+
+.temp-icon .icon {
+   width: 50px;
+   height: 50px;
+}
+
+.details p {
+   font-size: 14px;
+   margin: 5px 1px;
+}
+
+
+
+
+
+
+
+/* .loc {
+   background: none;
+   border: none;
+   cursor: pointer;
+} */
+/* .loc svg {
+   width: 30px;
+   height: 30px;
+   fill: none;
+}
+.loc svg path {
+   stroke: #979797;
+   stroke-width: 2px;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+} */
+/* .loc_none {
+   background: none;
+   border: none;
+   cursor: pointer;
+} */
+/* .loc_none svg {
+   width: 30px;
+   height: 30px;
+   fill: none;
+}
+.loc_none svg path {
+   stroke: #979797;
+   stroke-width: 2px;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+} */
