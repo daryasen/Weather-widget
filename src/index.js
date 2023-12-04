@@ -21,5 +21,3 @@ function request() {
       .catch(() => console.log("Error!!!"))
 }
 
-// let fore = await request()
-// console.log(fore)
