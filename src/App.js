@@ -5,7 +5,6 @@ import Forecast from "./componets/Forecast"
 
 const API_KEY = "ec89bba80f387f33187c9f32b1d17064"
 
-// const API_KEY = "078dff010664d9a1f14a1b6e469ec303"
 
 class App extends React.Component {
    constructor(props) {
