@@ -1,0 +1,19 @@
+p {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 1.125rem; 
+    font-weight: 400;
+    line-height: 1.318rem;
+    text-align: justify;
+    color: #000000;
+}
+
+.task {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.333% - 1rem);
+    color: #000000;
+}
+ 

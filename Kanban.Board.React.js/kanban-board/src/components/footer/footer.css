@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0067A3;
+    color: #ffffff;
+    padding: 0.5rem;
+    height: 3rem;
+} 
+  
+.footer__left {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+  
+.footer__right {
+    font-size: 0.875rem;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+  
