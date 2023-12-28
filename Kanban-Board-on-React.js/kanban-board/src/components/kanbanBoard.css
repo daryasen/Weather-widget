@@ -1,8 +1,0 @@
-main {
-    background-color: #0079BF;
-}
-
-.kanbanBoard__container {
-    display: flex;
-    flex-direction: row;
-}
