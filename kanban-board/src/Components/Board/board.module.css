@@ -1,0 +1,15 @@
+.board {
+    display: flex;
+    justify-content:space-around;
+    padding: 0px 30px 0px 30px;
+
+}
+
+@media (min-width: 359px) and (max-width: 1235px) {
+    .board{
+        flex-wrap: wrap;
+        width: 300px;
+        margin: auto;
+        margin-top: 70px;
+    }
+}

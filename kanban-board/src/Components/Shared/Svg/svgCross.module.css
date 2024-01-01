@@ -1,0 +1,41 @@
+.svgCross {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.svgUser {
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.svgArrowUp {
+    margin: 0px 0px 15px 0px;
+    width: 12px;
+    height: 7.42px;
+}
+
+.svgArrowDown {
+    margin: 0px 0px 15px 0px;
+    width: 12px;
+    height: 7.42px;
+}
+
+.buttonArrow {
+    padding: 0px;
+    margin: 0px 0px 15px 5px;
+    width: 12px;
+    height: 7.42px;
+    border: none;
+    background-color: #0067A3;
+    cursor: pointer;
+}
+
+@media (min-width: 375px) and (max-width: 1300px) {
+    .buttonArrow{
+        background-color: #0079BF;
+    }
+}
