@@ -1,0 +1,8 @@
+{
+    "flights": [
+      { "id": 1, "airline": "Pobeda", "price": "12680 Р", "duration": "4 ч 30 мин", "stops": "1 пересадка" },
+      { "id": 2, "airline": "Red Wings", "price": "21500 Р" , "duration": "2 ч", "stops": "Без пересадок" },
+      { "id": 3, "airline": "S7", "price": "23995 Р", "duration": "8 ч 40 мин", "stops": "2 пересадки" }
+    ]
+}
+  
