@@ -1,0 +1,12 @@
+.btnBuyNow {
+    background-color: white;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    color:  #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    margin: 16px 0px 0px 25px;
+}

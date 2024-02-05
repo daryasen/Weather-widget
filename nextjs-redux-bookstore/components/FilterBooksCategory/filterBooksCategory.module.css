@@ -1,0 +1,41 @@
+.containerShowcase {
+    position: relative;
+    top: -585px;
+    display: flex;
+    width: 1440;
+    max-height: 10146px;
+    background-color: white;
+}
+
+.categoryBooks {
+    width: 436px;
+    height: 710px;
+    background-color: #EFEEF6;
+}
+
+.categoryBooksList {
+    padding-left: 60px;
+    position: relative;
+    top: 30px;
+    left: 88px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.categoryBooksItem {
+    padding: 11px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C6A79;
+}
+
+.categoryActive {
+    padding: 11px;
+    position: relative;
+    margin-left: -17px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1C2A39;
+    list-style: inside;
+}

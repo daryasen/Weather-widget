@@ -1,0 +1,86 @@
+.containerProfile {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 87px;
+    width: 1440px;
+    height: 534px;
+    position: relative;
+    top: 110px;
+    left: 40px;
+}
+
+.infoProfile {
+    width: 501px;
+    height: 276px;
+}
+
+.aboutProfile {
+    width: 353px;
+    height: 345px;
+    box-shadow: 0px 15px 20px 0px #D3D3D3;
+    background-color: #FFE0E2;
+}
+
+.aboutProfileTitle {
+    margin: 17px 142px 0px 142px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #000000;
+}
+
+.aboutProfileText {
+    margin: 29px 28px 0px 29px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #5C6A79;
+}
+
+.infoProfileTitle {
+    width: 501px;
+    height: 41px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #1C2A39;
+}
+
+.infoProfileGeneralData {
+    display: flex;
+    width: 501px;
+    height: 235px;
+}
+
+.infoProfileImage {
+    width: 235px;
+    height: 235px;
+}
+
+.infoProfileData {
+    width: 266px;
+    height: 235px;
+}
+
+.infoProfileDataTitle {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 5px 0px 5px 0px;
+    color: #000000;
+}
+
+.infoProfileDataText {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0px 0px 25px 0px;
+    color: #000000;
+}
+
+.infoProfileButton {
+    margin-top: 15px;
+    width: 176px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 8px;
+    background-color: white;
+    border: 1px solid #4C3DB2;
+    color: #4C3DB2;
+    cursor: pointer;
+}

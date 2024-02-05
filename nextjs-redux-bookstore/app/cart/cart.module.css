@@ -1,0 +1,184 @@
+.containerCart {
+    position: relative;
+    top: 110px;
+    left:40px;
+    width: 1440px;
+    max-height: 2842px;
+}
+
+.titleCart {
+    margin: 87px 0px 19px 145px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.columnBlock {
+    display: flex;
+    width: 1440px;
+    height: 42px;
+}
+
+.nameColumn {
+    font-weight: 700;
+    font-size: 10px;
+    color: #5C6A79;
+}
+
+.item {
+    margin-left: 145px;
+}
+
+.quantity {
+    margin-left: 384px;
+}
+
+.price {
+    margin-left: 208px;
+}
+
+.delivery {
+    margin-left: 223px;
+}
+
+.containerInfo {
+    display: flex;
+    margin: 30px 0px 77px 145px;
+}
+
+.bookPositionImage {
+    box-shadow: 5px 15px 5px rgba(0,0,0,.3);
+}
+
+.itemFoto {
+    display: flex;
+    width: 304px;
+    height: 146;
+}
+
+.itemInfo {
+    width: 202px;
+    height: 146;
+}
+
+.bookPositionInfoTitle {
+    margin: 39px 0px 0px 25px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1C2A39;
+}
+
+.bookPositionInfoAuthor {
+    margin: 8px 0px 0px 25px;
+    font-weight: 400;
+    font-size: 10px;
+    color: #5C6A79;
+}
+
+.ratingBlock {
+    display: flex;
+    align-items: center;
+    margin: 11px 0px 0px 25px;
+    width: 176px;
+    height: 15px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.ratingBlockStarsAll {
+    display: flex;
+    width: 65px;
+    height: 15px;
+}
+
+.ratingBlockStarsYellow {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../../public/Star\ yellow.svg);
+}
+
+.ratingBlockStarsGrey {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../../public/Star\ grey.svg);
+}
+
+.ratingBlockCount {
+    margin-left: 6px;
+    width: 100px;
+    height: 15px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #5C6A79;
+}
+
+.quantityInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 31px 0px 0px 100px;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #EEEDF5;
+}
+
+.infoCount {
+    margin: 12px 0px 0px 25px;
+    font-weight: 700;
+    font-size: 16px;
+    color:#5C6A79;
+}
+
+.buttonPlus {
+    font-weight: 400;
+    font-size: 40px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.buttonMinus {
+    margin: -4px 0px 0px 5px;
+    font-weight: 400;
+    font-size: 45px;
+    vertical-align: top;
+    width: 0px;
+    height: 0px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.wrapperPrice {
+    margin: 37px 0px 0px 85px;
+    width: 57px;
+    height: 30px;
+}
+
+.priceInfo {
+    margin: 5px 0px 0px 0px;
+}
+
+.deleveryInfo {
+    margin: 37px 0px 0px 205px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #5C6A79;
+}
+
+.totalPrice {
+    margin: 117px 0px 19px 145px;
+}
+
+.button {
+    margin: 0px 0px 50px 145px;
+    width: 176px;
+    height: 45px;
+    background-color: white;
+    border: 1px solid #4C3DB2;
+    color: #4C3DB2;
+    cursor: pointer;
+}

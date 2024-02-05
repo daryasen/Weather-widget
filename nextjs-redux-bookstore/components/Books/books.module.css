@@ -1,0 +1,137 @@
+
+.containerBooks {
+    position: relative;
+    display: flex;
+    right: 50px;
+    flex-wrap: wrap;
+    width: 964px;
+    max-height: 10146px;
+}
+
+.bookPosition {
+    display: flex;
+    width: 480px;
+    height: 368px;
+}
+
+.bookPositionImage {
+    margin-top: 40px;
+    box-shadow: 5px 15px 5px rgba(0,0,0,.3);
+}
+
+.bookPositionImageNone {
+    margin-top: 40px;
+    font-size: 0;
+    background-size: cover;
+    box-shadow: 5px 15px 5px rgba(0,0,0,.3);
+    background-color: red;
+    background-image: url(/public/images/images\_placeholder.jpeg);
+}
+
+.bookPositionInfo {
+    position:relative;
+    margin-top: 40px;
+    width: 212px;
+    height: 310px;
+}
+
+.bookPositionInfoAuthor {
+    font-weight: 400;
+    padding: 40px 0px 0px 25px;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: #5C6A79;
+}
+
+.bookPositionInfoTitle {
+    width: 176px;
+    max-height: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px 0px 0px 25px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1C2A39;
+}
+
+.ratingBlock {
+    display: flex;
+    align-items: center;
+    margin: 4px 0px 0px 25px;
+    width: 176px;
+    height: 15px;
+}
+
+.displayNone {
+    display: none;
+}
+
+.ratingBlockStarsAll {
+    display: flex;
+    width: 65px;
+    height: 15px;
+}
+
+.ratingBlockStarsYellow {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../../public/Star\ yellow.svg);
+}
+
+.ratingBlockStarsGrey {
+    width: 12PX;
+    height: 12PX;
+    background-image: url(../../public/Star\ grey.svg);
+}
+
+.ratingBlockCount {
+    margin-left: 6px;
+    width: 100px;
+    height: 15px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #5C6A79;
+}
+
+.bookPositionInfoDescription {
+    width: 176px;
+    height: 42px;
+    margin: 17px 0px 0px 25px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #5C6A79;
+}
+
+.bookPositionInfoSale {
+    position: absolute;
+    bottom: 90px;
+    width: 170px;
+    height: 18px;
+    margin: 16px 0px 0px 25px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #1C2A39;
+}
+
+.btnBuyNow {
+    background-color: white;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    color:  #4C3DB2;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    bottom: 30px;
+    margin: 16px 0px 0px 25px;
+}
